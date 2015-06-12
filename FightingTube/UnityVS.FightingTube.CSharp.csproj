@@ -65,7 +65,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Player 1\Movement\MouseLook.cs" />
+    <Compile Include="Assets\CBG\FPSMeshTool\Scripts\Triangle.cs" />
+    <Compile Include="Assets\Scripts\Player\Movement\MouseLook.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\CBG\FPSMeshTool\Shaders\InvisibleShadowCaster.shader" />
+    <None Include="Assets\CBG\FPSMeshTool\Shaders\InvisibleShadowCasterUnity5.shader" />
+    <None Include="Assets\Fonts\OpenSans\License!.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

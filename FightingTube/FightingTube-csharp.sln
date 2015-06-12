@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{BB92AC67-F63B-49D0-0D7A-F223FE1141FE}") = "FightingTube", "Assembly-CSharp-vs.csproj", "{717BA760-E4DE-95D4-D5B8-F4CC1F0E7C21}"
 EndProject
+Project("{BB92AC67-F63B-49D0-0D7A-F223FE1141FE}") = "FightingTube", "Assembly-CSharp-Editor-vs.csproj", "{A694A7FB-C229-2552-71E0-A27777A27837}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{717BA760-E4DE-95D4-D5B8-F4CC1F0E7C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{717BA760-E4DE-95D4-D5B8-F4CC1F0E7C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{717BA760-E4DE-95D4-D5B8-F4CC1F0E7C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A694A7FB-C229-2552-71E0-A27777A27837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A694A7FB-C229-2552-71E0-A27777A27837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A694A7FB-C229-2552-71E0-A27777A27837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A694A7FB-C229-2552-71E0-A27777A27837}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-					GlobalSection(MonoDevelopProperties) = preSolution
+													GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

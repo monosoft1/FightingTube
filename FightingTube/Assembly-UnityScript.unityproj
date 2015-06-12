@@ -48,23 +48,26 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera\CameraManager.js" />
      <Compile Include="Assets\Scripts\Gun Damage\Bullet.js" />
-     <Compile Include="Assets\Scripts\Gun Damage\Gun.js" />
-     <Compile Include="Assets\Scripts\Multiplayer 1\DirectConnection.js" />
-     <Compile Include="Assets\Scripts\Multiplayer 1\SpawnManager.js" />
-     <Compile Include="Assets\Scripts\Player 1\Ammo\AmmoBarVFunction.js" />
-     <Compile Include="Assets\Scripts\Player 1\Health\Health.js" />
-     <Compile Include="Assets\Scripts\Player 1\Health\HealthBarVF.js" />
-     <Compile Include="Assets\Scripts\Player 1\Movement\Walker.js" />
-     <Compile Include="Assets\Scripts\UI 1\BlueTeam\BlueTeamButtonFunction.js" />
-     <Compile Include="Assets\Scripts\UI 1\Canvas\CanvasManagerS.js" />
-     <Compile Include="Assets\Scripts\UI 1\Connect\Scripts\ConnectBFS.js" />
-     <Compile Include="Assets\Scripts\UI 1\Disconnect\Scripts\DisconnectBFS.js" />
-     <Compile Include="Assets\Scripts\UI 1\RedTeam\RedTeamButtonFunction.js" />
-     <Compile Include="Assets\Scripts\UI 1\RemoteIP\ValueChanged.js" />
-     <Compile Include="Assets\Scripts\UI 1\RemotePort\RemotePValueCHanged.js" />
-     <Compile Include="Assets\Scripts\UI 1\Respawn\RespawnButtonFunction.js" />
-     <Compile Include="Assets\Scripts\UI 1\StartServer\Scripts\StartServerBFS.js" />
-     <Compile Include="Assets\Scripts\UI 1\TSCanvasManager\TSCanvasManager.js" />
+     <Compile Include="Assets\Scripts\Gun\Gun.js" />
+     <Compile Include="Assets\Scripts\Multiplayer\DirectConnection.js" />
+     <Compile Include="Assets\Scripts\Multiplayer\SpawnManager.js" />
+     <Compile Include="Assets\Scripts\Player\Ammo\AmmoBarVFunction.js" />
+     <Compile Include="Assets\Scripts\Player\Health\Health.js" />
+     <Compile Include="Assets\Scripts\Player\Health\HealthBarVF.js" />
+     <Compile Include="Assets\Scripts\Player\Movement\Walker.js" />
+     <Compile Include="Assets\Scripts\UI\BlueTeam\BlueTeamButtonFunction.js" />
+     <Compile Include="Assets\Scripts\UI\Canvas\CanvasManagerS.js" />
+     <Compile Include="Assets\Scripts\UI\Connect\Scripts\ConnectBFS.js" />
+     <Compile Include="Assets\Scripts\UI\Disconnect\Scripts\DisconnectBFS.js" />
+     <Compile Include="Assets\Scripts\UI\RedTeam\RedTeamButtonFunction.js" />
+     <Compile Include="Assets\Scripts\UI\RemoteIP\ValueChanged.js" />
+     <Compile Include="Assets\Scripts\UI\RemotePort\RemotePValueCHanged.js" />
+     <Compile Include="Assets\Scripts\UI\Respawn\RespawnButtonFunction.js" />
+     <Compile Include="Assets\Scripts\UI\StartServer\Scripts\StartServerBFS.js" />
+     <Compile Include="Assets\Scripts\UI\TSCanvasManager\TSCanvasManager.js" />
+     <None Include="Assets\CBG\FPSMeshTool\Shaders\InvisibleShadowCaster.shader" />
+     <None Include="Assets\Fonts\OpenSans\License!.txt" />
+     <None Include="Assets\CBG\FPSMeshTool\Shaders\InvisibleShadowCasterUnity5.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
