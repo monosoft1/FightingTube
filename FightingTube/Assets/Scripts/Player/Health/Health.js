@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 
 public static var HealthV : int = 100;
 var HealthVStatus : int;
@@ -58,7 +58,6 @@ function TakeDamage()
 
 function DIE()
 {
-   Debug.Log("I am Gone");
    Network.Destroy(gameObject);
    SpawnManager.Dead = true;
 }

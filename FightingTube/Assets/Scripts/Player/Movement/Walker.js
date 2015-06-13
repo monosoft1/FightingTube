@@ -1,4 +1,4 @@
-﻿var speed = 6.0;
+var speed = 6.0;
 var jumpSpeed = 8.0;
 var gravity = 20.0;
 
@@ -23,7 +23,7 @@ function FixedUpdate()
       
       moveDirection.y -= gravity * Time.deltaTime;
       
-      var controller : CharacterController = GetComponent(CharacterController);
+      var controller : CharacterController = GetComponentInParent(CharacterController);
       var flags = controller.Move(moveDirection * Time.deltaTime);
       grounded = (flags & CollisionFlags.CollidedBelow) != 0;
    }

@@ -9,12 +9,13 @@ var RedPlayerStatus : GameObject;
 var BluePlayerStatus : GameObject;
 
 public static var Dead : boolean = true;
-var DeadStatus : boolean = false;
+var DeadStatus : boolean = true;
 
 public static var Connection : boolean = false;
 var ConnectionStatus : boolean = false;
 
 public static var CurTeam : String = "";
+var CurTeamStatus : String = SpawnManager.CurTeam;
 
 public static var RespawnB : GameObject;
 var RespawnBStatus : GameObject;
@@ -31,7 +32,10 @@ var TSButtonsStatus : GameObject;
 public static var PlayerStatus : GameObject;
 var PlayerStatusS : GameObject;
 
-var CurTeamStatus : String = SpawnManager.CurTeam;
+public static var ConnectingButtons : GameObject;
+var ConnectingButtonsStatus : GameObject;
+
+
 
 public static var SpawnPointRed : GameObject;
 public static var SpawnPointBlue : GameObject; 
@@ -60,6 +64,8 @@ function Awake ()
    SpawnManager.TSButtons = TSButtonsStatus;
    
    SpawnManager.PlayerStatus = PlayerStatusS;
+
+   SpawnManager.ConnectingButtons = ConnectingButtonsStatus;
 }
 
 function Update () 
@@ -73,10 +79,8 @@ function Update ()
     SpawnManager.SpawnPointRed = SpawnPointRedStatus;
     
     ConnectionStatus = SpawnManager.Connection;
-    SpawnManager.Connection = ConnectionStatus;
     
     DeadStatus = SpawnManager.Dead;
-    SpawnManager.Dead = DeadStatus;
     
     SpawnManager.RespawnB = RespawnBStatus;
     
@@ -87,32 +91,34 @@ function Update ()
     SpawnManager.TSButtons = TSButtonsStatus;
     
     SpawnManager.PlayerStatus = PlayerStatusS;
-     
-    if(ConnectionStatus == true && DeadStatus == true && CurTeamStatus != "")
+    
+    SpawnManager.ConnectingButtons = ConnectingButtonsStatus;
+    if(ConnectionStatus == true && DeadStatus == false && CurTeamStatus != "")
     {
-       SpawnManager.TSCanvasO.SetActive(true);
-       SpawnManager.TSButtons.SetActive(false);
-       SpawnManager.RespawnB.SetActive(true);
+        SpawnManager.PlayerStatus.SetActive(true);
     }
-    if(SpawnManager.Connection == false && SpawnManager.Dead == true)
+    if(ConnectionStatus == true && DeadStatus == true && SpawnManager.CurTeam != "")
     {
-       SpawnManager.TSCanvasO.SetActive(true);
-       SpawnManager.TSButtons.SetActive(true);
+        SpawnManager.TSCanvasO.SetActive(true);
+        SpawnManager.TSButtons.SetActive(false);
+        SpawnManager.RespawnB.SetActive(true);
+        SpawnManager.PlayerStatus.SetActive(false);
+    }
+   if(ConnectionStatus == true && DeadStatus == true && SpawnManager.CurTeam == "")
+    {
+        SpawnManager.TSCanvasO.SetActive(true);
+        SpawnManager.TSButtons.SetActive(true);
        SpawnManager.RespawnB.SetActive(false);
+       SpawnManager.PlayerStatus.SetActive(false);
     }
-       
+
     if(Network.peerType == NetworkPeerType.Disconnected)
     {
-       if(SpawnManager.Connection == false)
-       {
-          SpawnManager.PlayerStatus.SetActive(false);
-          TSCanvasOStatus.SetActive(false);
-          NDisconnectBStatus.SetActive(true);
-       }
-       if(SpawnManager.Connection == true)
-       {
-          TSCanvasOStatus.SetActive(true);
-          NDisconnectBStatus.SetActive(true);
-       }
+        if(ConnectionStatus == false && DeadStatus == true && SpawnManager.CurTeam == "")
+        {
+            SpawnManager.ConnectingButtons.SetActive(true);
+            SpawnManager.TSCanvasO.SetActive(false);
+            SpawnManager.PlayerStatus.SetActive(false);
+        }
     }
 }

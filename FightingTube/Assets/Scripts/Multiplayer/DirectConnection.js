@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 
 public static var remoteIPadress : String = "127.0.0.1";
 public static var remotePort = 25000;
