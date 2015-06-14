@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 
 function Clicked () 
 {
@@ -7,6 +7,10 @@ function Clicked ()
       if(SpawnManager.CurTeam == "Blue")
       {
           Destroy(GameObject.FindGameObjectWithTag("PlayerBlue"));
+          var BlueBullet : GameObject[] = GameObject.FindGameObjectsWithTag("BlueBullet");
+          for (var targetBlue : GameObject in BlueBullet)
+            GameObject.Destroy(targetBlue);
+
           SpawnManager.NDisconnectB.SetActive(false);
           SpawnManager.ConnectingButtons.SetActive(true);
           SpawnManager.Connection = false;
@@ -15,6 +19,10 @@ function Clicked ()
       if(SpawnManager.CurTeam == "Red")
       {
           Destroy(GameObject.FindGameObjectWithTag("PlayerRed"));
+          var RedBullet : GameObject[] = GameObject.FindGameObjectsWithTag("RedBullet");
+          for (var targetRed : GameObject in RedBullet)
+            GameObject.Destroy(targetRed);
+
           SpawnManager.NDisconnectB.SetActive(false);
           SpawnManager.ConnectingButtons.SetActive(true);
           SpawnManager.Connection = false;

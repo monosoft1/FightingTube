@@ -7,6 +7,8 @@ function Clicked ()
         SpawnManager.Connection = true;
         Network.useNat = DirectConnection.useNAT;
         SpawnManager.TSCanvasO.SetActive(true);
+        SpawnManager.ConnectingButtons.SetActive(false);
+        SpawnManager.NDisconnectB.SetActive(true);
         Network.Connect(DirectConnection.remoteIPadress, DirectConnection.remotePort);
        
     }

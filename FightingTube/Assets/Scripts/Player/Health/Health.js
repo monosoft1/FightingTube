@@ -38,26 +38,35 @@ function OnGUI ()
 
 function OnTriggerEnter (hit : Collider) 
 {
-   if(hit.gameObject.tag == "RedBullet" && Team == "Blue")
-   {
-      bullet = hit.gameObject;
-      TakeDamage();
-   }
-   if(hit.gameObject.tag == "BlueBullet" && Team == "Red")
-   {
-      bullet = hit.gameObject;
-      TakeDamage();
-   }
+    if(GetComponent.<NetworkView>().isMine == true) 
+    {
+        if(hit.gameObject.tag == "RedBullet" && Team == "Blue")
+        {
+            bullet = hit.gameObject;
+            TakeDamage();
+        }
+        if(hit.gameObject.tag == "BlueBullet" && Team == "Red")
+        { 
+            bullet = hit.gameObject;
+            TakeDamage();
+        }
+    }
 }
 
 function TakeDamage()
 {
-   damage = Bullet.Damage;
-   HealthVStatus -= damage;
+    if(GetComponent.<NetworkView>().isMine == true) 
+    {
+        damage = Bullet.Damage;
+        HealthVStatus -= damage;
+    }
 }
 
 function DIE()
 {
-   Network.Destroy(gameObject);
-   SpawnManager.Dead = true;
+    if(GetComponent.<NetworkView>().isMine == true) 
+    {
+        Network.Destroy(gameObject);
+        SpawnManager.Dead = true;
+    }
 }

@@ -1,4 +1,4 @@
-var speed = 6.0;
+var speed = 7.0;
 var jumpSpeed = 8.0;
 var gravity = 20.0;
 
